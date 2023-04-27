@@ -1,4 +1,2 @@
 # Logical_questions
-logical questions on daily basis 
-sbsdkjbfkdj
-.
+logical questions on daily basis.
