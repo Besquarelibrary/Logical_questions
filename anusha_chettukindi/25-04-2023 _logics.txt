@@ -1,0 +1,146 @@
+LOGIC TO PRINT IF SYMMETRIC OR PALINDROME ANAGRAM 
+s="anutsanu"
+n=len(s)//2
+dict={}
+for i in s:
+    if i in dict:
+        dict[i]+=1
+    else:
+        dict[i]=1
+count=0
+for i in dict:
+    if(dict[i]%2!=0):
+        count=count+1
+if s[:n:]==s[n:len(s):]:
+    print("symmetric")
+elif (count<=1):
+        print("anagram palindrome")
+else:
+    print("not a palindrone and not a symmetric")
+------------------------------------------------
+LOGIC TO PRINT THE WORDS IN A SENTENCE IN REVERSE ORDER
+s="anusha chettukindi is here"
+s1=s.split()
+l=''.join([s1[i]+" " for i in range(-1,-4,-1)])
+print(l)
+
+LOGIC-2
+s="anusha chettukindi is here"
+s1=""
+l=[]
+for i in s:
+    if i==' ':
+        l=l+[s1]
+        s1=""
+    s1=s1+i
+l=l+[s1]
+result=''.join([l[i]+" " for i in range(-1,-len(l)-1,-1)])
+print(result)
+OUTPUT:
+here  is  chettukindi anusha
+-----------------------------
+CODE IN C
+--------------------------------------
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+   char s[100]="anusha is here";
+   
+  char w[20];
+  int i,j;
+  for(int i=strlen(s)-1,j=0;i>=0;i--){
+      if(s[i]!=' '){
+          w[j]=s[i];
+          j++;
+      }
+      else{
+          w[j]='\0';
+          for(int k=strlen(w)-1;k>=0;k--){
+              printf("%c",w[k]);
+          }
+          printf(" ");
+          j=0;
+      }
+  }
+  for(int k=strlen(w)-1;k>=0;k--){
+              printf("%c",w[k]);
+          }
+}
+---------------------------------------------------------
+LOGIC TO PRINT IF SYMMETRIC OR PALINDROME
+LOGIC-1
+THIS IS NORMAL PALINDROME
+s="sotso"
+n=len(s)//2
+if s[:n:]==s[n:len(s):]:
+    print("symmetric")
+elif s==s[::-1]:
+        print("palindrome")
+else:
+    print("not a palindrone and not a symmetric")
+
+LOGIC-2
+NEED TO COMPARE THE STRINGS IN SAME SYMMETRIC WAY BY SPLITTING THE STRING 
+NEED TO DO REVERSE OF THE SECOND PART AND COMPARE IT WITH FIRST PART IF IT IS EQUAL PALINDROME
+
+s="sossos"
+n=len(s)//2
+if s[:n:]==s[n:len(s):] and s[:n:]==s[-1:-n-1:-1]:
+    print("it is symmetric as well as palindrome")
+elif s[:n:]==s[n:len(s):]:
+    print("symmetric")
+elif s[:n:]==s[-1:-n-1:-1]:
+    print("palindrome")
+else:
+    print("not a palindrone and not a symmetric")
+
+LOGIC IN C
+
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char s1[]="sossos";
+    int length=0;
+    char pt2[50];
+    char rpt2[50];
+    char pt1[50];
+    int j;
+    for(int i=0;s1[i]!='\0';i++)
+    {
+        length=length+1;
+    }
+    int mid=length/2;
+    for(int i=0,j=0;i<mid;i++){
+        pt1[j]=s1[i];
+        j++;
+    }
+    //pt1[j]='\0';
+    if(length%2==0){
+        for(int i=length-1,j=0;i>=mid;i--){
+            rpt2[j]=s1[i];
+            j++;
+        }
+    }
+    else{
+        for(int i=length-1,j=0;i>mid;i--){
+            rpt2[j]=s1[i];
+            j++;
+        }
+    }
+    for(int i=mid,j=0;s1[i]!='\0';i++){
+        pt2[j]=s1[i];
+        j++;
+    }
+    if ((strcmp(pt1, pt2) == 0) && (strcmp(pt1, rpt2) == 0)) {
+        printf("both symmetric and palindrome");
+    } else if (strcmp(pt1, pt2) == 0) {
+        printf("symmetric");
+    } else if (strcmp(pt1, rpt2) == 0) {
+        printf("palindrome");
+    } else {
+        printf("it's not a palindrome as well as symmetric");
+    }
+
+    return 0;
+}
