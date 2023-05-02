@@ -1,3 +1,5 @@
+# To find if all alphabets present in the given string
+
 x = "The quick brown fox jump over the lazy dog"
 
 Alpha = []
@@ -8,7 +10,7 @@ for i in range(65, 91):
 # Method-1
 print([ele if ele in x.upper() else "not there" for ele in Alpha])
 
-# Method-2 
+# Method-2
 for ele in Alpha:
     if ele not in x.upper():
         print(ele, "Is not available...")
