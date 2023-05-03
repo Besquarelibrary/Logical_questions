@@ -2,21 +2,22 @@
 int ispalindrome(int n){
      int rev=0, temp = n;
 
-     while(temp>0){
+     while(temp){
           int rem = temp%10;
           rev = rev*10 + rem;
           temp /= 10;
      }
-
-     if(n==rev)
+     
+      if(n==rev)
         return 1;
-
-     return 0;
+      else
+        return 0;
 }
 
-int main(){
-    int arr[] = {121,2551552,616,07,1001};
-    int n = sizeof(arr)/sizeof(arr[0]),k=0;
+int main()
+{
+    int arr[] = {121,2551552,6116,07,1001},k=0;
+    int n = sizeof(arr)/sizeof(arr[0]);
   
     for(int i=0; i<n; i++)
     {
