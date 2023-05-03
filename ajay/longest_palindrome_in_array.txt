@@ -29,5 +29,5 @@ int main()
                 }
              }
     }
-    printf("%d ",k);
+    printf("longest palindrome in a given array is: %d ",k);
 }
