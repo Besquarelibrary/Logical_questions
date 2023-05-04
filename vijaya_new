@@ -1,9 +1,0 @@
-#palindrome and the find the max palindrome number
-x = [1221,1331,14415,18822881]
-d = {}
-for i in x:
-    if str(i) == str(i)[::-1]:
-        d[i] = len(str(i))
-print(d)
-y = max((d.keys()))
-print(y)
