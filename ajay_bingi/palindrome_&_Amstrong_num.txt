@@ -1,0 +1,97 @@
+#include <stdio.h>
+void prime_check(int num);
+void amstrong_check(int num);
+int add_two_elements(int a, int b);
+int main()
+{
+   int size,i,j;
+   printf("Enter size of an array: ");
+   scanf("%d", &size);
+   
+   int array[size];
+   printf("Enter array elements: ");
+   for(i=0; i<size; i++)
+   {
+       scanf("%d",&array[i]);
+   }
+   
+   for(i=0; i<size; i++)
+   {
+   prime_check(array[i]); 
+   amstrong_check(array[i]);
+   for(j=i+1; j<size; j++)
+   {
+    int k=add_two_elements(array[i],array[j]);
+    prime_check(k); 
+    amstrong_check(k);
+   }
+   }
+}
+
+
+int add_two_elements(int a, int b)
+{
+    int temp = b;
+    while (temp != 0) 
+    {
+        a *= 10;
+        temp /= 10;
+    }
+    return a + b;
+}
+
+void prime_check(int num)
+{
+    int flag=0,i;
+    //1 and 0 are not prime numbers
+   if (num == 0 || num == 1)
+      printf("%d is not a prime number\n", num);
+   else 
+   {
+      for (i = 2; i <= num/2; i++) 
+      {
+         if (num % i == 0) 
+         {
+            flag = 1;
+            break;
+         }
+      }
+      if (flag == 0)
+      {
+         printf("%d is a prime number\n", num);
+      }
+      else
+         printf("%d is not a prime number\n", num);
+   }
+}
+
+void amstrong_check(int num)
+{
+    int temp,sum=0,n=0,rem; 
+    
+    temp = num;
+    //counting no of didgit present in input
+    while (temp != 0) 
+    {
+      temp /= 10;
+      ++n;
+    }
+    
+   temp = num;
+   while (temp != 0) 
+   {
+      rem = temp % 10;
+      sum += pow(rem, n);
+      //sum +=rem<<n;
+      // sum +=rem*n*n;
+      temp /= 10;
+   }
+   if (sum == num)
+   {
+      printf("%d is an Armstrong number\n", num);
+   }
+   else
+      printf("%d is not an Armstrong number\n", num);
+}
+
+

@@ -1,0 +1,79 @@
+#include<stdio.h>
+int my_strcmp(char s1[], char s2[]);
+void check(char [],int);
+int str_len;
+int main()
+{
+    char str[]="anushaoanusha";
+    //for checking length
+    for(int i=0; str[i]!='\0'; i++)
+    {
+        str_len++;
+    }
+    check(str,str_len);
+}
+void check(char str[], int len)
+{
+    char temp1[50],temp2[50],temp3[50];
+    int mid_ind=len/2;
+    //1st half of string
+    for(int i=0; i<mid_ind; i++)
+    {
+        temp1[i]=str[i];
+    }
+    printf("temp1= %s\n",temp1);
+    //2nd half of string
+    for(int i=mid_ind; i<len; i++)
+    {
+        temp2[i-mid_ind]=str[i];
+    }
+    printf("temp2 = %s",temp2);
+    //reverse of 2nd string
+    for(int i=len-1; i>=mid_ind; i--)
+    {
+        temp3[len-1-i]=str[i];
+    }
+    printf("\ntemp3 = %s",temp3);
+    if(my_strcmp(temp1,temp2)==0 && my_strcmp(temp1,temp3)==0)  
+    printf("\nit is Symentric and Palindrome\n");
+    else if(my_strcmp(temp1,temp2)==0)
+    printf("\nit is Symentric\n");
+    else if(my_strcmp(temp1,temp3)==0)
+    printf("\nit is Palindrome\n");
+    else
+    printf("\nnot Symentric and not Palindrome");
+}
+
+
+// user-defined strcmp function
+int my_strcmp(char s1[], char s2[]) {
+  int i = 0;
+  while (s1[i] == s2[i]) {
+    if (s1[i] == '\0' || s2[i] == '\0')
+      break;
+    i++;
+  }
+  if (s1[i] == '\0' && s2[i] == '\0')
+    return 0;
+  else if (s1[i] < s2[i])
+    return -1;
+  else
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
