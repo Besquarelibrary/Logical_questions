@@ -1,0 +1,21 @@
+s = "python is very easy"
+st = ""
+l = []
+for i in s:
+    if (i == " "):
+        l = l+[st]
+        st = ""
+    else:
+        st = st + i
+print(st)
+l = l+[st]
+print(l)
+# for i in range(len(l)):
+#     x = l[len(l)-1:: -1]
+# print(x)
+# result = " ".join(x)
+# print(result)
+# List comprehension 
+# len(l)-1 (4-3), Stop upto -1, and step '-1' is for move forward
+result = " ".join([l[i] for i in range(len(l)-1, -1,-1)])
+print(result)
