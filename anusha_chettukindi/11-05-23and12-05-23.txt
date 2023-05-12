@@ -34,7 +34,7 @@ OUTPUT:
 -------------------------------------------------------------------------------------
 PROGRAM TO PRINT THE WHETHER THE ELEMENTS IN THE LIST ARE PERFECT OR NOT
 
-DEscription: A number is said to be perfect when the sum of the perfect squares of the number should equal to the actual number
+DEscription: A number is said to be perfect when the sum of the factors of the number should equal to the actual number
 
 PROGRAM:
 
@@ -42,14 +42,14 @@ PROGRAM:
 l=[7,28,1,12,6,2]
 #create the function for finding the perfect number 
 def perfect_num(n):
-    #To store sum of the perfect squares of that number
+    #To store sum of the factors of that number
     sum=0
-    #range upto half of the length of list because the perfect square of any number should not exist after a mid
+    #range upto half of the length of list because the factors of any number should not exist after a mid
     for i in range(1,(n//2)+1):
         #condition for perfect square
         if(n%i==0):
             sum=sum+i
-    #check whether perfect squares sum of that that number is equal to the actual number
+    #check whether sum of the factors of that that number is equal to the actual number
     if(sum==n):
         print(n,"is a perfect number")
     else:
