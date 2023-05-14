@@ -31,6 +31,60 @@ else:
 OUTPUT:
 {1: 4, 2: 2}
 1 is majority number
+------------------------------------------------------------------------------------
+LOGIC IN C
+
+#include <stdio.h>
+
+int main() {
+    //initialize an array
+    int a[9] = {1,2,2,3,1,1,2};
+    //size of array
+    int n = sizeof(a) / sizeof(a[0]);
+    
+    //sort an array using bubble sort 
+    for (int i = 0; i < n-1; i++) {
+        for (int j = i+1; j < n; j++) {
+            if (a[i] > a[j]) {
+                //temp for swapping an array
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    int count = 1;
+    int max=0;//to find the max accurance of an array
+    int val=0;//
+    for (int i = 1; i < n; i++) {
+        if (a[i] == a[i-1]) {
+            count += 1;
+        } else {
+            if(max<count){
+                max=count;
+                val=a[i-1];
+            }
+            else{
+                count = 1;
+            }
+        }
+    }
+    //this is for last element in an array
+    if(max<count){
+        max=count;
+        val=a[n-1];
+    }
+    //to check whether the element accurance count greater than the half of length of array ..// major number in an array
+    if(max>9/2){
+        printf("%d is the majority number",val);
+    }
+    else{
+        printf("there is no majority numbers in this array");
+    }
+}
+
+OUTPUT:
+2 is the majority number
 -------------------------------------------------------------------------------------
 PROGRAM TO PRINT THE WHETHER THE ELEMENTS IN THE LIST ARE PERFECT OR NOT
 
