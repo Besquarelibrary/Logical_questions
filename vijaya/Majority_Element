@@ -1,0 +1,19 @@
+#To find the greatest number in a given list
+l = [1,2,3,1,3,3,3,3,2,3,2]
+length_l = 0
+# Finding the length of l
+for i in l:
+    length_l = length_l + 1
+print("total length of the given list:",length_l)
+# Taking an empty dictionary to store the elements in the list as keys and values.
+dict = {}
+for i in l:
+    if i in dict:
+        dict[i]+= 1
+    else:
+        dict[i] = 1
+print(dict)
+# To find the majority element
+for i in dict:
+    if dict[i] > length_l/2:
+        print(i)
