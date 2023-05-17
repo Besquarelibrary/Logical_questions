@@ -31,6 +31,60 @@ else:
 OUTPUT:
 {1: 4, 2: 2}
 1 is majority number
+------------------------------------------------------------------------------------
+LOGIC IN C
+
+#include <stdio.h>
+
+int main() {
+    //initialize an array
+    int a[9] = {1,2,2,3,1,1,2};
+    //size of array
+    int n = sizeof(a) / sizeof(a[0]);
+    
+    //sort an array using bubble sort 
+    for (int i = 0; i < n-1; i++) {
+        for (int j = i+1; j < n; j++) {
+            if (a[i] > a[j]) {
+                //temp for swapping an array
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    int count = 1;
+    int max=0;//to find the max accurance of an array
+    int val=0;//
+    for (int i = 1; i < n; i++) {
+        if (a[i] == a[i-1]) {
+            count += 1;
+        } else {
+            if(max<count){
+                max=count;
+                val=a[i-1];
+            }
+            else{
+                count = 1;
+            }
+        }
+    }
+    //this is for last element in an array
+    if(max<count){
+        max=count;
+        val=a[n-1];
+    }
+    //to check whether the element accurance count greater than the half of length of array ..// major number in an array
+    if(max>9/2){
+        printf("%d is the majority number",val);
+    }
+    else{
+        printf("there is no majority numbers in this array");
+    }
+}
+
+OUTPUT:
+2 is the majority number
 -------------------------------------------------------------------------------------
 PROGRAM TO PRINT THE WHETHER THE ELEMENTS IN THE LIST ARE PERFECT OR NOT
 
@@ -66,3 +120,57 @@ OUTPUT:
 12 is not a perfect number
 6 is a perfect number
 2 is not a perfect number
+-----------------------------------------------------------------------------------------
+LOGIC IN C
+#include <stdio.h>
+
+int main() {
+    //initialization of array
+    int arr[10] = {25,6,28,4,2};
+    //to store array elements without duplicate values
+    int ar[10];
+    //count for length of the array without duplicates
+    int count=0;
+    //this logic to remove duplicates
+    for(int i=0;i<10;i++){
+        for(int j=i+1;j<10;j++){
+            if(arr[i]==arr[j]){
+                arr[j]=0;
+            }
+        }
+    }
+    for(int i=0,j=0;i<10;i++){
+        if(arr[i]!=0){
+            ar[j]=arr[i];
+            count+=1;
+            j++;
+        }
+    }
+    //this will print the array without duplicates
+    int j=0;
+    while(j<count){
+        printf("%d ",ar[j]);
+        j++;
+    }
+    printf("\n");
+//  logic to get the perfect number
+    for(int i=0;i<count;i++){
+        int sum=0;
+        for (int j=1;j<=ar[i]/2;j++){
+            if(ar[i]%j==0){
+                sum=sum+j;
+            }
+            if(sum==ar[i]){
+                printf("%d is perfect number\n",ar[i]);
+            }
+        }
+    }
+    
+
+}
+
+OUTPUT:
+25 6 28 4 2 
+6 is perfect number
+28 is perfect number
+
