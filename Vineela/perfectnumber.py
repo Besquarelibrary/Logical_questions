@@ -1,6 +1,6 @@
  # sum of its values are equal to number itself.then it will be a perfect number else not a perfect number.
 
-input_num = 6           
+input_num = 5           
 #here we assigning some value as an input
 result = 0              
 #initialize the variable With '0'  
