@@ -1,5 +1,5 @@
 #symmetrical and palindrome
-x = "khokho"
+x = "khokhoo"
 a = []
 b = []
 if len(x) % 2 == 0:
