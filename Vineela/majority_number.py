@@ -1,7 +1,7 @@
 #Find the majority number(most repeated number) in a list?
-#arr[] = {1,1,1,1,2,2,3,4,1,1}
+#arr[] = {1,1,1,1,2,2,3,4,1,2}
 
-list = [1, 1, 1, 1, 2, 2, 3, 4, 1, 1]  
+list = [1, 1, 1, 1, 2, 2, 3, 4, 1, 2]  
 #given Input list to find majority number
 n = len(list)  
 #length of the list
