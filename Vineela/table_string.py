@@ -1,6 +1,6 @@
 #Find the values in a given string by using index of given table.
 	   
-str = "Hi Team, this is Vineela"
+str = "Hi Team, i am Vineela"
 #here we are taken 2 table
 table = 2
 #consider an empty string
