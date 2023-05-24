@@ -9,11 +9,11 @@ x.sort()
 print(x)
 y = list(y)
 print(y)
-c = []
+d = []
 if y == x:
     print("Pangram")
 else:
     for i in y:
         if i not in x:
-            c.append(i)
-    print("Not pangram", c)
+            d.append(i)
+    print("Not pangram", d)
