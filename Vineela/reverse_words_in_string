@@ -1,6 +1,6 @@
 #reverse the words in a string
 # using split
-v = "i love being simple"
+v = "i love being simplee"
 z = v.split()
 y = " ".join(z[::-1])
 print(y)
