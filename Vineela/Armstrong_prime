@@ -1,5 +1,5 @@
 #armstrong and prime
-list_ele = [1, 121, 53, 7, 9]
+list_ele = [1, 121, 53, 7, 10]
 iterations = 0
 armstrong = 0
 for ele in list_ele:
