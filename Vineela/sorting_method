@@ -1,4 +1,4 @@
-#sorting method for 0,1,2.
+#sorting method for 0,1,2,3.
 def sort(a, y):
     low = 0
     mid = 0
@@ -21,7 +21,7 @@ def printarray(a):
         print(k, end='')
 
 
-arr = [0, 1, 0, 1, 2]
+arr = [0, 1, 0, 3, 2]
 n = len(arr)
 arr = sort(arr, n)
 printarray(arr)
