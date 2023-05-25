@@ -4,7 +4,7 @@ int partition (int a[], int start, int end)  //partion funtion defination
     int pivot = a[end];   
     int i = (start - 1),j,t;  
   
-    for(j = start; j <= end - 1; j++)  
+    for(j = start; j <= end - 1; j++) // Looping for end-1 from start 
     {  
           
         if (a[j] < pivot)  //condition for swapping
@@ -17,7 +17,7 @@ int partition (int a[], int start, int end)  //partion funtion defination
  
         }  
     }  
-
+    /*swapping*/
     t = a[i+1];  
     a[i+1] = a[end];  
     a[end] = t; 
@@ -29,7 +29,7 @@ void quick(int a[], int start, int end) //quick sort function defination
 {  
     if (start < end)  
     {  
-        int p = partition(a, start, end); 
+        int p = partition(a, start, end); // calling partition function 
         quick(a, start, p - 1);  //recursive call
         quick(a, p + 1, end);  //recursive call 
     }  
