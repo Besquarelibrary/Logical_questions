@@ -2,7 +2,7 @@
 
 x = "The quick brown fox jump over the lazy dog"
 
-Alpha = []
+Alpha = []  # To append alphabets
 
 for i in range(65, 91):
     Alpha.append(chr(i))
