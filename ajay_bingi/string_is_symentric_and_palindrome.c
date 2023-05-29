@@ -4,7 +4,7 @@ void check(char [],int);
 int str_len;
 int main()
 {
-    char str[]="anushaoanusha";
+    char str[]="level";
     //for checking length
     for(int i=0; str[i]!='\0'; i++)
     {
@@ -14,34 +14,28 @@ int main()
 }
 void check(char str[], int len)
 {
-    char temp1[50],temp2[50],temp3[50];
+    char temporary1[50],temporary2[50],temporary3[50];
     int mid_ind=len/2;
     //1st half of string
     for(int i=0; i<mid_ind; i++)
-    {
-        temp1[i]=str[i];
-    }
-    printf("temp1= %s\n",temp1);
+        temporary1[i]=str[i];    
+
     //2nd half of string
     for(int i=mid_ind; i<len; i++)
-    {
-        temp2[i-mid_ind]=str[i];
-    }
-    printf("temp2 = %s",temp2);
+        temporary2[i-mid_ind]=str[i];
+
     //reverse of 2nd string
     for(int i=len-1; i>=mid_ind; i--)
-    {
-        temp3[len-1-i]=str[i];
-    }
-    printf("\ntemp3 = %s",temp3);
-    if(my_strcmp(temp1,temp2)==0 && my_strcmp(temp1,temp3)==0)  
-    printf("\nit is Symentric and Palindrome\n");
-    else if(my_strcmp(temp1,temp2)==0)
-    printf("\nit is Symentric\n");
-    else if(my_strcmp(temp1,temp3)==0)
-    printf("\nit is Palindrome\n");
+        temporary3[len-1-i]=str[i];
+
+    if(my_strcmp(temporary1,temporary2)==0 && my_strcmp(temporary1,temporary3)==0)  
+    printf("it is Symentric and Palindrome\n");
+    else if(my_strcmp(temporary1,temporary2)==0)
+    printf("it is Symentric\n");
+    else if(my_strcmp(temporary1,temporary3)==0)
+    printf("it is Palindrome\n");
     else
-    printf("\nnot Symentric and not Palindrome");
+    printf("not Symentric and not Palindrome");
 }
 
 
@@ -60,7 +54,6 @@ int my_strcmp(char s1[], char s2[]) {
   else
     return 1;
 }
-
 
 
 
