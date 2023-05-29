@@ -1,5 +1,5 @@
 # ordered, unchangeable and it allows duplicate values
-# 
+#
 x=("apple","banana","cherry","apple","mango","cherry")
 print(x)
 print(x[:3])    # to access the values from the particular index
