@@ -10,6 +10,7 @@ int main()
     {
         if(array[index]<array[index+1])           
         count++;                                   // above condition is true it will count
+        break;
     }
     printf("%d",count);
 }
