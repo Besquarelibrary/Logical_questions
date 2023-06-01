@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main() {
-    char string[] = "racecar";
+    char stringing[] = "racecar";
     int frequent[256] = {0};
     int length = 0;
-    //to find legnth of string
-    for(int i=0; string[i]!='\0'; i++)
+    //to find legnth of stringing
+    for(int i=0; stringing[i]!='\0'; i++)
         length++;
     printf("%d\n",length);
-    //keeping string elementrs as index values for frequent array and incrementing them which are repeated
+    //keeping stringing elementrs as index values for frequent array and incrementing them which are repeated
     for (int i = 0; i <= length; i++) 
-        frequent[string[i]]++;
+        frequent[stringing[i]]++;
     
     int odd_count = 0;
     //checking the which one is not repeated

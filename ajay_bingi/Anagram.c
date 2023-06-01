@@ -1,20 +1,20 @@
-/*If the characters in string1 is equal to the chracters in  string2 irrespective of their positions
+/*If the characters in stringing1 is equal to the chracters in  stringing2 irrespective of their positions
 is called as ANAGRAM*/
 
 #include <stdio.h>
 int same; //here default value is zero
 int main() 
 {
-    char string1[]="star";
-    char string2[]="rast";
+    char stringing1[]="star";
+    char stringing2[]="rast";
     
     int length1=0,length2=0;
-    //The below two for loop's is for calculating the length of string's
-    for(int i=0; string1[i]!='\0'; i++)
+    //The below two for loop's is for calculating the length of stringing's
+    for(int i=0; stringing1[i]!='\0'; i++)
         length1++;
-    for(int i=0; string1[i]!='\0'; i++)
+    for(int i=0; stringing1[i]!='\0'; i++)
         length2++;
-    //chechking string length's are same or  not 
+    //chechking stringing length's are same or  not 
     if(length1==length2)
     {
     //cehcking each chracter in both the sgtring's
@@ -23,7 +23,7 @@ int main()
         for(int j=0; j<length2; j++)
         {
             //checking they are equal or not 
-            if(string1[i]==string2[j])
+            if(stringing1[i]==stringing2[j])
             {
                 same++; //if equal, increase's and then break the inner for loop
                 break;
