@@ -15,7 +15,7 @@ int main()
 	n=sizeof(count1)/sizeof(int);
 	for(i=0;i<n;i++) // loop to find whether the two arrays are same
 	{
-		if(count1[i]==count2[i]) //condition to find whether the two arrays are same
+		if(count1[i]==count2[i]) //condition to find whether the two arrays are same or not
 		{
 			same++;
 		}
