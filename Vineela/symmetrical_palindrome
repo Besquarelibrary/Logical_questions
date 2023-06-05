@@ -1,0 +1,26 @@
+#symmetrical and palindrome
+x = "khokhoo"
+a = []
+b = []
+if len(x) % 2 == 0:
+    for i in range(0, len(x)//2):
+        a.append(x[i])
+    print(a)
+    for i in range(len(x)//2, len(x)):
+        b.append(x[i])
+    print(b)
+if a == b:
+    print("the given string is symmetric")
+else:
+    print("the given string is not symmetric")
+
+x = "amma"
+z = ""
+for i in x:
+    z = i+z
+print(z)
+if x == z:
+    print("the given string is palindrome")
+else:
+    print("the given string is not palindrome")
+

@@ -1,0 +1,19 @@
+#Find the given string is Pangram if not print missing char?
+x = "The quick brown fox jumps over the dog"
+y = "abcdefghijklmnopqrstuvwxyz"
+x = x.lower()
+x = set(x)
+x = list(x)
+x.remove(" ")
+x.sort()
+print(x)
+y = list(y)
+print(y)
+d = []
+if y == x:
+    print("Pangram")
+else:
+    for i in y:
+        if i not in x:
+            d.append(i)
+    print("Not pangram", d)
