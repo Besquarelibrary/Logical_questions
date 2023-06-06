@@ -1,2 +1,1 @@
-This is Bignesh's logical directory 
-please handle with care
+This is Bignesh's logical directory
