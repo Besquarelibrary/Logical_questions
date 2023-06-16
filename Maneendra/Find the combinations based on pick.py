@@ -1,3 +1,6 @@
+Find the combinations based upon on pick value
+----------------------------------------------
+
 arr = [1, 8, 4, 5]
 pick = 3
 # taking empty list to store the combinations of given array
