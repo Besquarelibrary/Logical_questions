@@ -1,13 +1,11 @@
 #include<stdio.h>
 int main()
 {
-    int array1[]={0,3,5,9,6}, array2[]={2,7,1,8,4}; 
-    int length1=length2=0,i,j,m,k,a,b;
-    //to find legnth of array's
-    for(i=0; array1[i]!='\0'; i++)
-        length1++;
-    for(i=0; array2[i]!='\0'; i++)
-        length2++;
+    int array1[]={0,3,5,10,6}, array2[]={2,7,1,8,4}; 
+    int length1,length2,length3;
+    int i,j,m,k,a,b;
+    length1=sizeof(array1)/sizeof(array1[0]);
+    length2=sizeof(array2)/sizeof(array2[0]);
     int temporary[length1+length2];
     //assigning array1 elements to temporary array
     for(i=0; i<length1; i++)
@@ -19,11 +17,8 @@ int main()
     {
         temporary[i]=array2[j];
     }
-    int length3=0;
-    //to find legnth of array
-    for(i=0; temporary[i]!='\0'; i++)
-        length3++;
 
+    length3=sizeof(temporary)/sizeof(temporary[0]);
     //swapping elements using bubble_sort 
     for(k=0; k<length3; k++)
     {
