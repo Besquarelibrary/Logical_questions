@@ -49,4 +49,3 @@ OUTPUT:
 pick_count matched length combinations are: [1, 3, 4]
 pick_count matched length combinations are: [3, 4, 6]
 pick_count matched length combinations are: [1, 2, 4]
-pick_count matched length combinations are: [1, 2, 4]
