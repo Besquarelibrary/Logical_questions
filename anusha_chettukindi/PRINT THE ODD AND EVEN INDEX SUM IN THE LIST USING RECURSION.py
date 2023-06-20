@@ -44,3 +44,38 @@ print("odd sum is:", odd(i,odd_sum,l))
 OUTPUT:
 even sum is: 11
 odd sum is: 7
+
+-----------------------------------------------------------------------
+PRINT THE MAX OF ODD AND EVEN INDEX ELEMENTS IN THE LIST USING THE RECURSION
+
+l=[1,3,4,4,6]
+i=0
+even_sum=0
+odd_sum=0
+#for returning the even index elements 
+def even(i,even_sum,odd_sum,l):
+    #for checking the even index 
+    if i%2==0 and i<len(l):
+        #adding the value to sum
+        even_sum=even_sum+l[i]
+        #for adding next even value 
+        return even(i+1,even_sum,odd_sum,l)
+    #for checking if it is odd
+    elif i%2!=0 and i<len(l):
+        odd_sum=odd_sum+l[i]
+        #for calling the function when it is odd 
+        return even(i+1,even_sum,odd_sum,l)
+    #when that exceeds the length 
+    else:
+        #checking the max between odd and even
+        if(even_sum>odd_sum):
+            #return even if it is max
+            return "even_sum is:",even_sum
+        else:
+            #return odd if it is max
+            return "odd_sum is:",odd_sum
+#calling for printing the even s
+print(even(i,even_sum,odd_sum,l))
+
+OUTPUT:
+('even_sum is:', 11)
