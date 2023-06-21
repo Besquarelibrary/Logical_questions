@@ -1,5 +1,6 @@
+"""
 Merge the given arrays with alternate values
----------------------------------------------------------------------
+"""
 
 first_arr = [1, 2, 3, 4, 5, 0]
 second_arr = [6, 7, 8, 9 ,10]
@@ -20,4 +21,4 @@ for index in range(max_value):
         third_arr += [first_arr[index]]
     if index < length_second_arr:
         third_arr += [second_arr[index]]
-print(third_arr)
+print("Merged_array:", third_arr)
