@@ -1,15 +1,15 @@
-#which is ordered,changeable and it does not allow duplicates
+# which is ordered,changeable and it does not allow duplicates
 
 num={"1":"name","2":"abc","3":"def","4":"mango"}
 num.update({"3":"apple"})
 print(num)
-x=num.get("1")                 #to get the value for a particular key
+x=num.get("1")                 # to get the value for a particular key
 print(x)
 num[4]="apple"                 # to update the key value for a particular key
 print(num)
 
-#to remove items(pop,popitem,del,clear)
-num.popitem()                  #to remove the last item from the dictionary
+# to remove items(pop,popitem,del,clear)
+num.popitem()                  # to remove the last item from the dictionary
 print(num)
 num.pop("3")                   # to remove the particular item from the dictionary
 print(num)
@@ -18,7 +18,7 @@ print(num)
 num.clear()                    # this method empties the dict
 print(num)
 
-#to copy the items (copy,dict)
+# to copy the items (copy,dict)
 # num2=num.copy()                # to make copy of dictionary
 # print(num2)
 # num2=dict(num)                 # another inbuilt method to copy a dictionary
