@@ -21,5 +21,5 @@ int main()
 
     int hcf = findHCF(num1, num2); // function call
 
-    printf("The HCF is %d",hcf);
+    printf("The HCF is %d\n",hcf);
 }
