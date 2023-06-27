@@ -3,7 +3,7 @@ Merge the given arrays with alternate values
 """
 
 first_arr = [1, 2, 3, 4, 5, 0]
-second_arr = [6, 7, 8, 9 ,10]
+second_arr = [6, 7, 8, 9, 10]
 
 # take an empty list to store the values alternatively
 third_arr = []
